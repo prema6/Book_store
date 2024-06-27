@@ -1,0 +1,1 @@
+export const Mongo = "mongodb://localhost:27017/book-collection"
