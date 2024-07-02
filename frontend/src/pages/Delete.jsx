@@ -7,7 +7,7 @@ function Delete() {
   const { id } = useParams()
   const navigate = useNavigate()
   useEffect(() => {
-    axios.delete(`http://localhost:3000/books/${id}`)
+    axios.delete(`https://book-store-two-peach.vercel.app/books/${id}`)
       .then(() => {
         navigate('/')
       })

@@ -12,7 +12,7 @@ function Create() {
             author,
             price
         }
-        axios.post('http://localhost:3000/books',data)
+        axios.post('https://book-store-two-peach.vercel.app/books',data)
         .then(()=>{
             console.log('post create then')
             navigate('/')

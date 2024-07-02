@@ -10,7 +10,7 @@ function Update() {
   const [author, setAuthor] = useState('')
   const [price, setPrice] = useState('')
   useEffect(()=>{
-    axios.get(`http://localhost:3000/books/${id}`).then((res)=>{
+    axios.get(`https://book-store-two-peach.vercel.app/books/${id}`).then((res)=>{
       setTitle(res.data[0].Title)
       setAuthor(res.data[0].author)
       setPrice(res.data[0].price)

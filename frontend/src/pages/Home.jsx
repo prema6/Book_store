@@ -7,7 +7,7 @@ export default function Home() {
     const[loading,setloading] = useState(false)
     useEffect(()=>{
         setloading(true)
-        axios.get('http://localhost:3000/books')
+        axios.get('https://book-store-two-peach.vercel.app/books')
         .then((res)=>{
             setData(res.data)
             console.log(res.data)
