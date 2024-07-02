@@ -6,6 +6,7 @@ import { Book } from '../models/bookmodel.js';
 router.get('/', async(req,res)=>{
     try{
         const book = await Book.find({})
+        console.log("received")
         return res.json(book)
     }
     catch(err){
