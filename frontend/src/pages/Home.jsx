@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom'
 export default function Home() {
     const [data, setData] = useState([])
     const[loading,setloading] = useState(false)
+    axios.defaults.withCredentials = true;
+
     useEffect(()=>{
         setloading(true)
         axios.get('https://book-store-two-peach.vercel.app/books')

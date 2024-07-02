@@ -9,6 +9,8 @@ function Update() {
   const [Title, setTitle] = useState('')
   const [author, setAuthor] = useState('')
   const [price, setPrice] = useState('')
+  axios.defaults.withCredentials = true;
+
   useEffect(()=>{
     axios.get(`https://book-store-two-peach.vercel.app/books/${id}`).then((res)=>{
       setTitle(res.data[0].Title)

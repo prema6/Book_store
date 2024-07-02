@@ -6,6 +6,8 @@ import { useNavigate } from 'react-router-dom'
 function Delete() {
   const { id } = useParams()
   const navigate = useNavigate()
+  axios.defaults.withCredentials = true;
+
   useEffect(() => {
     axios.delete(`https://book-store-two-peach.vercel.app/books/${id}`)
       .then(() => {
