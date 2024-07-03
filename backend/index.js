@@ -1,16 +1,15 @@
-const express = require('express');
-const cors = require('cors');
-const app = express();
-const mongoose = require("mongoose");
+// const express = require('express');
+// const cors = require('cors');
+// const app = express();
+// const mongoose = require("mongoose");
 
-// import express from 'express'
-// import mongoose from 'mongoose'
+import express from 'express';
+import mongoose from 'mongoose';
 import { Mongo } from './config.js'
 import { Book } from './models/bookmodel.js'
 import booksroute from './routes/booksroute.js'
-// const cors = require('cors');
-// import cors from 'cors'
-// const app = express()
+import cors from 'cors';
+const app = express();
 
 // CORS middleware
 app.use(cors({
