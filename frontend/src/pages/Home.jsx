@@ -9,7 +9,7 @@ export default function Home() {
 
     useEffect(()=>{
         setloading(true)
-        axios.get('https://book-store-two-peach.vercel.app/books')
+        axios.get('https://book-store-api-one.vercel.app/books')
         // axios.get('http://localhost:3000/books')
         .then((res)=>{
             setData(res.data)
