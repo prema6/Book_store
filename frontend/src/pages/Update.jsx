@@ -9,7 +9,7 @@ function Update() {
   const [Title, setTitle] = useState('')
   const [author, setAuthor] = useState('')
   const [price, setPrice] = useState('')
-  axios.defaults.withCredentials = true;
+  // axios.defaults.withCredentials = true;
 
   useEffect(()=>{
     axios.get(`https://book-store-api-one.vercel.app/books/${id}`).then((res)=>{
