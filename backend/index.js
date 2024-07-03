@@ -3,7 +3,8 @@ import mongoose from 'mongoose'
 import { Mongo } from './config.js'
 import { Book } from './models/bookmodel.js'
 import booksroute from './routes/booksroute.js'
-import cors from 'cors'
+const cors = require('cors');
+// import cors from 'cors'
 const app = express()
 app.use(express.json());
 app.use(cors({
