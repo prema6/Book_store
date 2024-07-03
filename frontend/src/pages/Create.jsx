@@ -13,7 +13,7 @@ function Create() {
             price
         }
         axios.defaults.withCredentials = true;
-        axios.post('https://book-store-two-peach.vercel.app/books',data)
+        axios.post('https://book-store-api-one.vercel.app/books',data)
         .then(()=>{
             console.log('post create then')
             navigate('/')
