@@ -1,12 +1,25 @@
-import express from 'express'
-import mongoose from 'mongoose'
+const express = require('express');
+const cors = require('cors');
+const app = express();
+const mongoose = require("mongoose");
+
+// import express from 'express'
+// import mongoose from 'mongoose'
 import { Mongo } from './config.js'
 import { Book } from './models/bookmodel.js'
 import booksroute from './routes/booksroute.js'
-const cors = require('cors');
+// const cors = require('cors');
 // import cors from 'cors'
-const app = express()
-app.use(express.json());
+// const app = express()
+
+// CORS middleware
+app.use(cors({
+  origin: 'https://book-store-frontend-red.vercel.app',
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true
+}));
+
 // app.use(cors({
 //     // origin: 'https://book-store-frontend-red.vercel.app',
 //     // origin: ['http://localhost:3001'],
@@ -16,6 +29,10 @@ app.use(express.json());
 //     // credentials: true
 // }))
 
+// Body parsing middleware
+app.use(express.json());
+
+// Additional CORS headers manually if needed
 app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', 'https://book-store-frontend-red.vercel.app');
   res.header('Access-Control-Allow-Methods', 'GET,POST,PUT,DELETE,OPTIONS');
