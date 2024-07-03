@@ -10,9 +10,8 @@ app.use(cors(
     {
         origin: ['https://book-store-two-peach.vercel.app'],
         // origin: ['http://localhost:3001'],
-        methods: ['GET,HEAD,PUT,PATCH,POST,DELETE'],
+        methods: ['GET','HEAD','PUT','PATCH','POST','DELETE'],
         credentials: true
-    
     }
 ))
 
