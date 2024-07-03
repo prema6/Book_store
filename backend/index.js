@@ -1,8 +1,3 @@
-// const express = require('express');
-// const cors = require('cors');
-// const app = express();
-// const mongoose = require("mongoose");
-
 import express from 'express';
 import mongoose from 'mongoose';
 import { Mongo } from './config.js'
