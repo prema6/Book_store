@@ -9,7 +9,7 @@ function Delete() {
   axios.defaults.withCredentials = true;
 
   useEffect(() => {
-    axios.delete(`https://book-store-two-peach.vercel.app/books/${id}`)
+    axios.delete(`https://book-store-api-one.vercel.app/books/${id}`)
       .then(() => {
         navigate('/')
       })
