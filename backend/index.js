@@ -12,7 +12,7 @@ app.use(cors({
     // origin: ['http://localhost:3001'],
     methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization'],
-    credentials: true
+    // credentials: true
 }))
 
 app.use('/books', booksroute)
